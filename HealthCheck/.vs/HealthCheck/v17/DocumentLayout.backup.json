@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\healthcheck.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\healthcheck.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|solutionrelative:healthcheck\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8AB079E-2C40-4F8C-AD08-3FE5067763CB}|HealthCheck\\HealthCheck.csproj|c:\\users\\user\\documents\\git\\mvc_project\\healthcheck\\healthcheck\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,28 +50,106 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250711162416_InitialAppDb.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs",
+              "RelativeDocumentMoniker": "HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs",
+              "RelativeToolTip": "HealthCheck\\Migrations\\AppDb\\20250711162416_InitialAppDb.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAQwCkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T16:24:16.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250711162323_InitialIdentityDb.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs",
+              "RelativeDocumentMoniker": "HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs",
+              "RelativeToolTip": "HealthCheck\\Migrations\\20250711162323_InitialIdentityDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T16:23:23.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HealthCheck",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\HealthCheck.csproj",
+              "RelativeDocumentMoniker": "HealthCheck\\HealthCheck.csproj",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\HealthCheck.csproj",
+              "RelativeToolTip": "HealthCheck\\HealthCheck.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-11T16:23:04.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Program.cs",
+              "RelativeDocumentMoniker": "HealthCheck\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Program.cs",
+              "RelativeToolTip": "HealthCheck\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T16:12:56.803Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "HealthCheck\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "HealthCheck\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T16:10:00.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "HealthCheck\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "HealthCheck\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T16:06:47.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\appsettings.json",
               "RelativeDocumentMoniker": "HealthCheck\\appsettings.json",
               "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\appsettings.json",
               "RelativeToolTip": "HealthCheck\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-11T13:32:30.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "HealthCheck\\Properties\\launchSettings.json",
@@ -60,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "HealthCheck\\Models\\ApplicationUser.cs",
@@ -73,13 +175,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "HealthCheck\\Models\\Appointment.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\git\\MVC_Project\\HealthCheck\\HealthCheck\\Models\\Appointment.cs",
               "RelativeToolTip": "HealthCheck\\Models\\Appointment.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-11T12:58:35.108Z",
               "EditorCaption": ""
