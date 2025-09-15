@@ -1,7 +1,7 @@
 ﻿using HealthCheck.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace  HealthCheck.Data
+namespace HealthCheck.Data
 {
     public class AppDbContext : DbContext
     {
@@ -35,18 +35,12 @@ namespace  HealthCheck.Data
                 .Property(r => r.Amount)
                 .HasColumnType("decimal(18, 2)");
 
-            // Configure many-to-many relationship for Doctor and Specialization
-            // This is already handled by the DoctorSpecialization join table, but you can add more explicit configurations if needed.
-            // modelBuilder.Entity<DoctorSpecialization>()
-            //     .HasKey(ds => new { ds.DoctorId, ds.SpecializationId }); // Composite key if you remove the 'Id' property from DoctorSpecialization
-
-            // Define relationships where foreign keys are present
-            // Organization to Doctors, Clerks, Clients
+            // Relationships
             modelBuilder.Entity<Organization>()
                 .HasMany(o => o.Doctors)
                 .WithOne(d => d.Organization)
                 .HasForeignKey(d => d.OrganizationId)
-                .OnDelete(DeleteBehavior.Restrict); // Or .Cascade, depending on your business rules
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Organization>()
                 .HasMany(o => o.Clerks)
@@ -60,7 +54,6 @@ namespace  HealthCheck.Data
                 .HasForeignKey(c => c.OrganizationId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Doctor to Schedules, Appointments
             modelBuilder.Entity<Doctor>()
                 .HasMany(d => d.Schedules)
                 .WithOne(s => s.Doctor)
@@ -73,34 +66,82 @@ namespace  HealthCheck.Data
                 .HasForeignKey(a => a.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Client to Appointments
             modelBuilder.Entity<Client>()
                 .HasMany(c => c.Appointments)
                 .WithOne(a => a.Client)
                 .HasForeignKey(a => a.ClientId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Appointment to Payment
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Payment)
                 .WithOne(p => p.Appointment)
                 .HasForeignKey<Payment>(p => p.AppointmentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Payment to Refund
             modelBuilder.Entity<Payment>()
                 .HasOne(p => p.Refund)
                 .WithOne(r => r.Payment)
                 .HasForeignKey<Refund>(r => r.PaymentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Clerk to Appointments (optional relationship for ApprovedByClerk)
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.ApprovedByClerk)
                 .WithMany(c => c.ManagedAppointments)
                 .HasForeignKey(a => a.ApprovedByClerkId)
-                .IsRequired(false) // Make it optional
-                .OnDelete(DeleteBehavior.SetNull); // Or .Restrict
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            // Data seeding
+            modelBuilder.Entity<Organization>().HasData(
+                new Organization { Id = 1, Name = "City Health Clinic" },
+                new Organization { Id = 2, Name = "Downtown Medical Center" }
+            );
+
+            modelBuilder.Entity<Specialization>().HasData(
+                new Specialization { Id = 1, Name = "Cardiology" },
+                new Specialization { Id = 2, Name = "Dermatology" },
+                new Specialization { Id = 3, Name = "Pediatrics" },
+                new Specialization { Id = 4, Name = "Neurology" }
+            );
+
+            modelBuilder.Entity<Doctor>().HasData(
+                new Doctor { Id = 1, FirstName = "Alice", LastName = "Smith", OrganizationId = 1 },
+                new Doctor { Id = 2, FirstName = "Bob", LastName = "Jones", OrganizationId = 2 },
+                new Doctor { Id = 3, FirstName = "Carol", LastName = "White", OrganizationId = 1 }
+            );
+
+            modelBuilder.Entity<Client>().HasData(
+                new Client { Id = 1, FirstName = "John", LastName = "Doe", OrganizationId = 1 },
+                new Client { Id = 2, FirstName = "Jane", LastName = "Roe", OrganizationId = 2 },
+                new Client { Id = 3, FirstName = "Sam", LastName = "Green", OrganizationId = 1 }
+            );
+
+            modelBuilder.Entity<Clerk>().HasData(
+                new Clerk { Id = 1, FirstName = "Clerk", LastName = "One", OrganizationId = 1 },
+                new Clerk { Id = 2, FirstName = "Clerk", LastName = "Two", OrganizationId = 2 }
+            );
+
+            modelBuilder.Entity<DoctorSpecialization>().HasData(
+                new DoctorSpecialization { Id = 1, DoctorId = 1, SpecializationId = 1 },
+                new DoctorSpecialization { Id = 2, DoctorId = 2, SpecializationId = 2 },
+                new DoctorSpecialization { Id = 3, DoctorId = 3, SpecializationId = 3 }
+            );
+
+            modelBuilder.Entity<Appointment>().HasData(
+
+            );
+
+            modelBuilder.Entity<Payment>().HasData(
+                new Payment { Id = 1, AppointmentId = 1, Amount = 100.00m },
+                new Payment { Id = 2, AppointmentId = 2, Amount = 150.00m }
+            );
+
+            modelBuilder.Entity<Refund>().HasData(
+                new Refund { Id = 1, PaymentId = 1, Amount = 20.00m }
+            );
+
+            modelBuilder.Entity<Schedule>().HasData(
+            );
         }
     }
 }

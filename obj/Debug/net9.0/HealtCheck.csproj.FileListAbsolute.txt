@@ -231,3 +231,4 @@ C:\Users\User\Documents\git\HealtCheck\obj\Debug\net9.0\refint\HealtCheck.dll
 C:\Users\User\Documents\git\HealtCheck\obj\Debug\net9.0\HealtCheck.pdb
 C:\Users\User\Documents\git\HealtCheck\obj\Debug\net9.0\HealtCheck.genruntimeconfig.cache
 C:\Users\User\Documents\git\HealtCheck\obj\Debug\net9.0\ref\HealtCheck.dll
+C:\Users\User\Documents\git\HealtCheck\obj\Debug\net9.0\HealtCheck.sourcelink.json
