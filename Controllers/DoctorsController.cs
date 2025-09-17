@@ -6,55 +6,28 @@ namespace HealtCheck.Controllers
 {
     public class DoctorsController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        // ...existing code...
 
-        public IActionResult Details(int id)
+        // Admin-only doctor management
+        [HttpGet]
+        public IActionResult Manage()
         {
-            return View();
-        }
-
-        public IActionResult Create()
-        {
+            // List all doctors
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Doctor doctor)
+        public IActionResult AddDoctor(string email, string firstName, string lastName, string password)
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            return View(doctor);
-        }
-
-        public IActionResult Edit(int id)
-        {
-            return View();
+            // Add doctor logic (create ApplicationUser, assign Doctor role, add to Doctors table)
+            return RedirectToAction("Manage");
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, Doctor doctor)
+        public IActionResult RemoveDoctor(string userId)
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            return View(doctor);
-        }
-
-        public IActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            return RedirectToAction(nameof(Index));
+            // Remove doctor logic (delete ApplicationUser, remove from Doctors table)
+            return RedirectToAction("Manage");
         }
     }
 }
