@@ -9,13 +9,15 @@ namespace HealtCheck.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly UserManager<ApplicationUser> _userManager;
+    private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly HealthCheck.Data.AppDbContext _dbContext;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, HealthCheck.Data.AppDbContext dbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
@@ -39,8 +41,18 @@ namespace HealtCheck.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    // Optionally, create a Client record for the new user
+                    var client = new Client
+                    {
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Email = model.Email,
+                        ApplicationUserId = user.Id
+                    };
+                    _dbContext.Clients.Add(client);
+                    _dbContext.SaveChanges();
+                    TempData["RegisterSuccess"] = "Registration successful! You can now log in with your new password.";
+                    return RedirectToAction("RegisterSuccess");
                 }
                 foreach (var error in result.Errors)
                 {
@@ -48,6 +60,13 @@ namespace HealtCheck.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult RegisterSuccess()
+        {
+            ViewBag.Message = TempData["RegisterSuccess"];
+            return View();
         }
 
         [HttpGet]
@@ -119,34 +138,34 @@ namespace HealtCheck.Controllers
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
+        public string? ConfirmPassword { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         public bool RememberMe { get; set; }
     }

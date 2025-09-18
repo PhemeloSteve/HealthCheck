@@ -1,14 +1,38 @@
 using Microsoft.AspNetCore.Mvc;
 using HealtCheck.Models;
 using HealthCheck.Models;
+using Microsoft.AspNetCore.Identity;
+using HealthCheck.Data;
 
 namespace HealtCheck.Controllers
 {
     public class ClientsController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public ClientsController(AppDbContext context, UserManager<ApplicationUser> userManager)
         {
-            return View();
+            _context = context;
+            _userManager = userManager;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Account", new { returnUrl = "/Clients/Index" });
+
+            var userId = _userManager.GetUserId(User);
+            var client = _context.Clients.FirstOrDefault(c => c.ApplicationUserId == userId);
+            if (client == null)
+            {
+                return View(new List<Appointment>());
+            }
+            var appointments = _context.Appointments
+                .Where(a => a.ClientId == client.Id)
+                .OrderByDescending(a => a.StartTime)
+                .ToList();
+            return View(appointments);
         }
 
         public IActionResult Details(int id)

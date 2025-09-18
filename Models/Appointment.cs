@@ -24,8 +24,8 @@ namespace HealthCheck.Models
         [Required]
         public DateTime EndTime { get; set; }
 
-        [StringLength(500)]
-        public string Reason { get; set; }
+    [StringLength(500)]
+    public string? Reason { get; set; }
 
         [Required]
         public AppointmentStatus Status { get; set; } = AppointmentStatus.PendingApproval;
@@ -34,10 +34,10 @@ namespace HealthCheck.Models
 
         // Optional: Clerk who approved/managed this appointment
         public int? ApprovedByClerkId { get; set; }
-        [ForeignKey("ApprovedByClerkId")]
-        public Clerk ApprovedByClerk { get; set; }
+    [ForeignKey("ApprovedByClerkId")]
+    public Clerk? ApprovedByClerk { get; set; }
 
-        // Navigation property for payment
-        public Payment Payment { get; set; }
+    // Navigation property for payment
+    public Payment? Payment { get; set; }
     }
 }

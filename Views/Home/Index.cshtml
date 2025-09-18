@@ -71,6 +71,14 @@
         <div class="feature-card">
             <div class="feature-title">Find a Doctor</div>
             <div class="feature-desc">Browse specialists and choose the right doctor for your needs.</div>
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <a href="/Doctors/Index" class="btn btn-dark mt-2">View Doctors</a>
+            }
+            else
+            {
+                <a href="/Account/Login?returnUrl=/Doctors/Index" class="btn btn-dark mt-2">View Doctors</a>
+            }
         </div>
         <div class="feature-card">
             <div class="feature-title">Manage Appointments</div>
