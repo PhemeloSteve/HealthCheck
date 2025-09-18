@@ -1,21 +1,23 @@
-# HealtCheck
+# HealthCheck
 
-HealtCheck is a web application for managing healthcare appointments, doctors, clients, and organizations.
+HealthCheck is a modern hospital booking system web application. It allows patients to book appointments, view doctors, and manage their health records securely. The system supports role-based access for admins, doctors, clerks, and clients.
 
 ## Features
 
+- Book and manage healthcare appointments
+- Browse and view doctors by specialization
+- Role-based dashboards for Admin, Doctor, Clerk, and Client
+- Secure login and registration with minimalist black & white UI
 - Manage doctors, clients, clerks, and organizations
-- Book and manage appointments
-- Assign specializations to doctors
 - Payment and refund management
-- User authentication (login/register)
-- Responsive Bootstrap-based UI
+- Responsive, full-width layout with Bootstrap
+- Privacy and security for health data
 
 ## Getting Started
 
 ### Prerequisites
 
-- [.NET 7 SDK or later](https://dotnet.microsoft.com/download)
+- [.NET 9 SDK or later](https://dotnet.microsoft.com/download)
 - SQL Server (or LocalDB for development)
 
 ### Setup
@@ -23,8 +25,8 @@ HealtCheck is a web application for managing healthcare appointments, doctors, c
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/yourusername/HealtCheck.git
-   cd HealtCheck
+   git clone https://github.com/PhemeloSteve/HealthCheck.git
+   cd HealthCheck
    ```
 
 2. **Configure the database:**
@@ -48,11 +50,18 @@ HealtCheck is a web application for managing healthcare appointments, doctors, c
 
 ## Project Structure
 
-- `Controllers/` - MVC controllers for each entity
-- `Models/` - Entity models
-- `Data/` - Entity Framework DbContext and data seeding
-- `Views/` - Razor views for UI
+- `Controllers/` - MVC controllers for appointments, doctors, clients, clerks, and accounts
+- `Models/` - Entity models for all system entities
+- `Data/` - Entity Framework DbContext and migrations
+- `Views/` - Razor views for all pages (Home, Login, Register, Appointments, Doctors, etc.)
 - `wwwroot/` - Static files (CSS, JS, images)
+
+## UI & Navigation
+
+- Home page: Hospital booking system dashboard with creative, modern design
+- Login/Register: Minimalist black & white Bootstrap styling
+- Navigation: Role-based links; Appointments require login, Doctors page lists all doctors
+- Full-width main content for immersive experience
 
 ## License
 
