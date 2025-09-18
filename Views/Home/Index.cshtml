@@ -2,7 +2,83 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .hospital-hero {
+        background: linear-gradient(90deg, #fff 60%, #e9ecef 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        padding: 3rem 2rem 2rem 2rem;
+        margin: 40px auto 24px auto;
+        text-align: center;
+    }
+    .hospital-title {
+        font-size: 2.7rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 0.5rem;
+    }
+    .hospital-desc {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 2rem;
+    }
+    .booking-btn {
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 14px 36px;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        transition: background 0.2s;
+    }
+    .booking-btn:hover {
+        background: #222;
+    }
+    .hospital-features {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        flex-wrap: wrap;
+    }
+    .feature-card {
+        background: #fff;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 1.2rem 1.5rem;
+        min-width: 180px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        text-align: left;
+    }
+    .feature-title {
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 0.3rem;
+    }
+    .feature-desc {
+        color: #444;
+        font-size: 0.98rem;
+    }
+</style>
+
+<div class="hospital-hero">
+    <div class="hospital-title">HealthCheck Hospital Booking</div>
+    <div class="hospital-desc">Book appointments, view doctors, and manage your health easily and securely.</div>
+    <a href="/Appointments/Create" class="booking-btn">Book Appointment</a>
+    <div class="hospital-features">
+        <div class="feature-card">
+            <div class="feature-title">Find a Doctor</div>
+            <div class="feature-desc">Browse specialists and choose the right doctor for your needs.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Manage Appointments</div>
+            <div class="feature-desc">View, reschedule, or cancel your upcoming appointments.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-title">Secure & Private</div>
+            <div class="feature-desc">Your health data is protected with industry-leading security.</div>
+        </div>
+    </div>
 </div>

@@ -39,13 +39,6 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
-
-app.MapControllerRoute(
-    name: "account",
-    pattern: "{controller=Account}/{action=Login}/{id?}");
-app.MapControllerRoute(
-    name: "register",
-    pattern: "{controller=Account}/{action=Register}/{id?}");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
